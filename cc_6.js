@@ -60,3 +60,19 @@ function convertCurrency(amount, conversionRate) {  //created a function that ta
 
 console.log(`Converted amount: $${convertCurrency(100, 1.1)}`)
 console.log(`Converted amount: $${convertCurrency(250, .85)}`)
+
+//Task 6
+console.log("Task 6")
+
+let orders = [200, 600, 1200, 450, 800];        //Declared the orders array with values
+const applyBulkDiscount = (orders, discountFunction) => {   //This function makes it so that the next function will apply to each value in the orders array
+    return orders.map((amount) => discountFunction(amount));
+};
+
+const discountFunction = (amount) => {      //This function says that if the order is above 500, apply a 10% discount
+    return amount > 500 ? amount * 0.9 : amount;
+}
+
+const discountedOrders = applyBulkDiscount(orders, discountFunction); //declared a discountedOrders variable for logging purposes
+console.log(`Discounted orders: ${discountedOrders}`)
+
