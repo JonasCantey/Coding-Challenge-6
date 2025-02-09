@@ -18,3 +18,20 @@ function calculateSalesTax(amount, taxRate) {   //Created a function that takes 
 
 console.log(`Sales Tax: $${calculateSalesTax(100, 0.07)}`)
 console.log(`Sales Tax: $${calculateSalesTax(500, 0.1)}`)
+
+//Task 3
+console.log("Task 3")
+
+function calculateBonus(salary, performanceRating) {
+    let bonus; 
+    if (performanceRating === "Excellent")  {bonus = salary * 0.2}
+        
+     else if (performanceRating === "Good")  {bonus = salary * 0.1}
+     else if (performanceRating === "Average") {bonus = salary * 0.05} 
+     else { bonus = 0}
+     return `Bonus: $${bonus.toFixed(2)}`
+    }
+
+console.log(calculateBonus(5000, "Excellent"))
+console.log(calculateBonus(7000, "Good"))
+
