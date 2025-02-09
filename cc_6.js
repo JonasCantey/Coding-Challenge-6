@@ -50,3 +50,13 @@ function calculateSubscriptionCost(plan, months, discount) {
 
 console.log(calculateSubscriptionCost("Basic", 6, 10))
 console.log(calculateSubscriptionCost("Premium", 12, 0))
+
+//Task 5
+console.log("Task 5")
+
+function convertCurrency(amount, conversionRate) {  //created a function that takes inputs amount and conversionRate
+    return (amount * conversionRate).toFixed(2)     //and multiplies them together. Then rounds to the nearest hundreths place
+}
+
+console.log(`Converted amount: $${convertCurrency(100, 1.1)}`)
+console.log(`Converted amount: $${convertCurrency(250, .85)}`)
