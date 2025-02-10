@@ -76,3 +76,18 @@ const discountFunction = (amount) => {      //This function says that if the ord
 const discountedOrders = applyBulkDiscount(orders, discountFunction); //declared a discountedOrders variable for logging purposes
 console.log(`Discounted orders: ${discountedOrders}`)
 
+//Task 7
+console.log("Task 7")
+
+const createExpenseTracker = () => {    //created a function createExpenseTracker and declared
+let totalExpense = 0                    //the starting total expense as 0. Then made an addExpense
+const addExpense = (amount) => {        //function that took the total expense and added the amount
+    totalExpense += amount;             //I then had the updated total expense returned.
+    return `Total Expenses: $${totalExpense}`
+};
+    return addExpense;      //Returned the inner function
+};
+let tracker = createExpenseTracker();
+console.log(tracker(200));
+console.log(tracker(150));
+
