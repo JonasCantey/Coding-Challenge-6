@@ -91,3 +91,13 @@ let tracker = createExpenseTracker();
 console.log(tracker(200));
 console.log(tracker(150));
 
+//Task 8
+console.log("Task 8")
+
+function calculateYearsToPromotion (employeeLevel) {    //created a function calculateYearsToPromotion
+    return (10 - employeeLevel) * 2                     //which takes desired level (level 10) and subtracts current level
+}                                                       //and then multiplies the difference by 2 because each level takes 2 years
+
+console.log(`Years till level 10: ${calculateYearsToPromotion(7)}`)
+console.log(`Years till level 10: ${calculateYearsToPromotion(5)}`)
+
